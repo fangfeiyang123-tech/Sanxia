@@ -22,7 +22,6 @@
             padding: 20px;
         }
         
-        /* 卡片容器 */
         .container {
             max-width: 1200px;
             width: 100%;
@@ -32,7 +31,6 @@
             overflow: hidden;
         }
         
-        /* 顶栏 */
         .header {
             padding: 24px 32px;
             background: linear-gradient(135deg, #1a3a5c 0%, #2a5f7a 100%);
@@ -51,7 +49,6 @@
             font-size: 14px;
         }
         
-        /* 嵌入区域 */
         .embed-wrapper {
             padding: 24px;
             background: #f8fafc;
@@ -59,18 +56,17 @@
             justify-content: center;
         }
         
-        /* 您提供的 iframe 直接放在这里 */
+        /* 正确的 iframe 样式 */
         .embed-wrapper iframe {
             border: 1px solid rgba(0, 0, 0, 0.1);
             border-radius: 12px;
             width: 100%;
-            max-width: 800px;  /* 控制最大宽度，保持设计稿比例 */
-            height: 450px;
+            max-width: 800px;
+            height: 700px;
             background: white;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
         }
         
-        /* 底部 */
         .footer {
             padding: 16px 32px;
             border-top: 1px solid #eef2f6;
@@ -79,7 +75,6 @@
             color: #5e6f8d;
         }
         
-        /* 手机适配 */
         @media (max-width: 640px) {
             .header {
                 padding: 18px 20px;
@@ -91,32 +86,27 @@
                 padding: 12px;
             }
             .embed-wrapper iframe {
-                height: 300px; /* 手机上降低高度 */
+                height: 500px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- 顶部 -->
         <div class="header">
             <h1>🏔️ 三峡之行</h1>
             <p>交互式设计预览 · 点击即可体验完整流程</p>
         </div>
         
-        <!-- Figma 嵌入 - 您的 iframe 代码 -->
         <div class="embed-wrapper">
+            <!-- ✅ 修复后的 iframe：只有一个，且使用正确的 embed 链接 -->
             <iframe 
-                <iframe
-                  style="border: none;"
-                  width="100%"
-                  height="700"
-                  src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/MONpQvyNUJQeeVPuX8Gg6j/Sanxia?node-id=0-1&starting-point-node-id=0%3A1&scaling=contain"
-                  allowfullscreen>
-                </iframe>
+                style="border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 12px; width: 100%; max-width: 800px; height: 700px; background: white;" 
+                src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/MONpQvyNUJQeeVPuX8Gg6j/Sanxia?node-id=0-1" 
+                allowfullscreen>
+            </iframe>
         </div>
         
-        <!-- 底部 -->
         <div class="footer">
             💡 提示：在 Figma 中按 <kbd>Shift</kbd> 键可进入开发模式查看代码
         </div>
